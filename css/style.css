@@ -173,7 +173,7 @@ header {
     display: block;
   }
 
-  main button{
+form button{
     background-color:#383838;
     border: none;
     color: white;
@@ -188,7 +188,7 @@ header {
     cursor: pointer;
   }
   
-  main button:hover {opacity: 1}
+  form button:hover {opacity: 1}
  
 
  .style{
@@ -267,6 +267,19 @@ header {
  }
 
  .logo{
+       position: absolute;
+    right: 150px;
   margin: auto;
   margin-bottom: 50px;
  }
+
+span{
+  color: red;
+  font-weight: bolder;
+  
+}
+
+span:hover{
+  background-color: rgba(50, 53, 53, 0.596);
+}
+

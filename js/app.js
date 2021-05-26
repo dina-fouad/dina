@@ -38,6 +38,8 @@ function render (){
     let head = document.createElement('tr')
     table.appendChild(head)
 
+  
+
     let th1 = document.createElement('th')
     head.appendChild(th1)
     th1.textContent = "First name"
@@ -63,9 +65,13 @@ function render (){
     let trE =document.createElement('tr')
     table.appendChild(trE)
 
+
+    
+    
+
      let td1 = document.createElement('td')
      trE.appendChild(td1)
-     td1.textContent=`${Cars.all[i].fname}`
+     td1.innerHTML=`<span onclick="deletRow(${i})">X</span> ${Cars.all[i].fname}`;
       
      
      let td2 = document.createElement('td')
@@ -82,7 +88,7 @@ function render (){
 
      let td5 = document.createElement('img')
      trE.appendChild(td5)
-     td5.src=`${Cars.all[i].img}`
+     td5.src=`${Cars.all[i].img}`;
 
     }
 }
@@ -110,3 +116,12 @@ function saveData() {
   }
   
   getDate();
+
+
+  
+  function deletRow(num){
+   Cars.all.splice(num,1);
+    saveData();
+    render();
+  }
+   
